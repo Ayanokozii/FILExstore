@@ -1,7 +1,7 @@
 #(©)rajasahab3891
 
 
-
+import Subhi 
 
 import os
 import asyncio
@@ -116,7 +116,8 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 
 #=====================================================================================##
 
-Subhi_PICS = [
+
+Subhi_Pics = [
 "https://telegra.ph/file/aa59ad0716b4c3b453485.jpg",
 "https://telegra.ph/file/763ec86089c7f825a4d3a.jpg",
 "https://telegra.ph/file/19fe7626ab7615c46d190.jpg",
@@ -136,17 +137,9 @@ Subhi_PICS = [
     
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-   await add_served_user(message.from_user.id)
-    if len(message.text.split()) > 1:
-        name = message.text.split(None, 1)[1]
-        if name[0:4] == "help":
-            keyboard = help_pannel(_)
-            return await message.reply_photo(
-                random.choice(Subhi_PICS),
-                caption=_["help_1"].format(config.SUPPORT_CHAT),
-                reply_markup=keyboard,
             )
-            
+             return await message.reply_photo(
+                random.choice(Subhi_PICS)
             buttons = [
         [
             InlineKeyboardButton(
