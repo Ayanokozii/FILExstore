@@ -140,6 +140,8 @@ async def not_joined(client: Client, message: Message):
              return await message.reply_photo(
                 random.choice(Subhi_PICS)
              )
+
+
             buttons = [
         [
             InlineKeyboardButton(
