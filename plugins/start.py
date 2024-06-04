@@ -1,7 +1,7 @@
 #(©)rajasahab3891
 
 
-import Subhi 
+
 
 import os
 import asyncio
@@ -116,33 +116,11 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 
 #=====================================================================================##
 
-
-Subhi_Pics = [
-"https://telegra.ph/file/aa59ad0716b4c3b453485.jpg",
-"https://telegra.ph/file/763ec86089c7f825a4d3a.jpg",
-"https://telegra.ph/file/19fe7626ab7615c46d190.jpg",
-"https://telegra.ph/file/aa59ad0716b4c3b453485.jpg",
-"https://telegra.ph/file/763ec86089c7f825a4d3a.jpg",
-"https://telegra.ph/file/19fe7626ab7615c46d190.jpg",
-"https://telegra.ph/file/aa59ad0716b4c3b453485.jpg",
-"https://telegra.ph/file/763ec86089c7f825a4d3a.jpg",
-"https://telegra.ph/file/19fe7626ab7615c46d190.jpg",
-"https://telegra.ph/file/aa59ad0716b4c3b453485.jpg",
-"https://telegra.ph/file/763ec86089c7f825a4d3a.jpg",
-"https://telegra.ph/file/19fe7626ab7615c46d190.jpg"
-
-]
-
     
     
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-             return await message.reply_photo(
-                random.choice(Subhi_PICS)
-             )
-
-
-            buttons = [
+       buttons = [
         [
             InlineKeyboardButton(
                 "Join Channel 1",
