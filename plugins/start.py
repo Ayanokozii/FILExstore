@@ -116,21 +116,52 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 
 #=====================================================================================##
 
+Subhi_PICS = [
+"https://telegra.ph/file/aa59ad0716b4c3b453485.jpg",
+"https://telegra.ph/file/763ec86089c7f825a4d3a.jpg",
+"https://telegra.ph/file/19fe7626ab7615c46d190.jpg",
+"https://telegra.ph/file/aa59ad0716b4c3b453485.jpg",
+"https://telegra.ph/file/763ec86089c7f825a4d3a.jpg",
+"https://telegra.ph/file/19fe7626ab7615c46d190.jpg",
+"https://telegra.ph/file/aa59ad0716b4c3b453485.jpg",
+"https://telegra.ph/file/763ec86089c7f825a4d3a.jpg",
+"https://telegra.ph/file/19fe7626ab7615c46d190.jpg",
+"https://telegra.ph/file/aa59ad0716b4c3b453485.jpg",
+"https://telegra.ph/file/763ec86089c7f825a4d3a.jpg",
+"https://telegra.ph/file/19fe7626ab7615c46d190.jpg"
+
+]
+
     
     
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    buttons = [
+   await add_served_user(message.from_user.id)
+    if len(message.text.split()) > 1:
+        name = message.text.split(None, 1)[1]
+        if name[0:4] == "help":
+            keyboard = help_pannel(_)
+            return await message.reply_photo(
+                random.choice(Subhi_PICS),
+                caption=_["help_1"].format(config.SUPPORT_CHAT),
+                reply_markup=keyboard,
+            )
+            
+            buttons = [
         [
             InlineKeyboardButton(
-                "Join Channel1",
-                url = client.invitelink)
+                "Join Channel 1",
+                url = client.invitelink), (
+                "Join Channel 2",
+                url = f"https://t.me/viru_writes" )
         ]
         ,
          [
             InlineKeyboardButton(
-                "Join Channel2",
-                url = f"https://t.me/twc_chats" )
+                "Group🛖",
+                url = f"https://t.me/twc_chats" ),(
+                "Owner😎",
+                url = f"https://t.me/rajasahab3891" )
         ]
     ]
     try:
