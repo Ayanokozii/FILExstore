@@ -126,7 +126,7 @@ async def not_joined(client: Client, message: Message):
              InlineKeyboardButton("JOIN CHANNEL 2🎯", url=f"https://t.me/viru_writes")
         ],
         [
-            InlineKeyboardButton("Group🛖", url=f"https://t.me/Rajasahab3891"),
+            InlineKeyboardButton("Group🛖", url=f"https://t.me/Twc_chats"),
             InlineKeyboardButton("Owner😎", url=f"https://t.me/Rajasahab3891")
         ]
         ,
